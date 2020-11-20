@@ -14,7 +14,7 @@
     </div>
     <div class="inline-block">
         <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member1.jpg" align="left" width="250" height="250">
-    </div>Emyll
+    </div>
     <div class="inline-block">
         <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member2.jpg" align="left" width="250" height="250">
     </div>

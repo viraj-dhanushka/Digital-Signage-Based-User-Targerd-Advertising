@@ -10,16 +10,16 @@
                            
 <div id="Members" >
     <div class="inline-block">
-        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Emyll.jpeg" align="left" width="210" height="210">
+        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Emyll.jpeg" align="left" width="160" height="160">
     </div>
     <div class="inline-block">
-        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member1.jpg" align="left" width="210" height="210">
+        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member1.jpg" align="left" width="160" height="160">
     </div>
     <div class="inline-block">
-        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member2.jpg" align="left" width="210" height="210">
+        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member2.jpg" align="left" width="160" height="160">
     </div>
     <div class="inline-block">
-       <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member3.jpg" alt= " "  width="200" height="210">
+       <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member3.jpg" alt= " "  width="140" height="160">
     </div>
 </div>
 

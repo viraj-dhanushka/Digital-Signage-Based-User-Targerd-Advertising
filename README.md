@@ -10,7 +10,7 @@
                            
 <div id="Members" >
     <div class="inline-block">
-        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Emyll.jpg" align="left" width="250" height="250">
+        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Emyll.jpeg" align="left" width="250" height="250">
     </div>
     <div class="inline-block">
         <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member1.jpg" align="left" width="250" height="250">

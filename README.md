@@ -3,9 +3,10 @@
 [**Click here to visit our website**](https://viradhanus.github.io/Digital-Signage-Based-User-Targerd-Advertising/)
 
 #### Project Contributors : 
-  * Dhanushka S.M.V. 
-  * Lakmali B.L.S. 
-  * Thisanke M.K.H.   
+  * Viraj Dhanushka  
+  * Emyll Almonte
+  * Sumudu Lakmali  
+  * Hans Thisanke   
                            
 <div id="Members" >
     <div class="inline-block">

@@ -1,11 +1,11 @@
 # Project Name : Digital Signage Based User Targeted Advertising
 
-[**Click here to visit our website**](https://cepdnaclk.github.io/e16-3yp-digital-signage-based-user-targeted-advertising/)
+[**Click here to visit our website**](https://viradhanus.github.io/Digital-Signage-Based-User-Targerd-Advertising/)
 
-#### Group Members : 
-  * Dhanushka S.M.V. &nbsp;&nbsp;&nbsp; E/16/083 &nbsp;&nbsp;&nbsp;e16083@eng.pdn.ac.lk
-  * Lakmali B.L.S. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E/16/200  &nbsp;&nbsp;&nbsp;&nbsp;e16200@eng.pdn.ac.lk
-  * Thisanke M.K.H.   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E/16/368 &nbsp;&nbsp;&nbsp;&nbsp;e16368@eng.pdn.ac.lk
+#### Project Contributors : 
+  * Dhanushka S.M.V. 
+  * Lakmali B.L.S. 
+  * Thisanke M.K.H.   
                            
 <div id="Members" >
     <div class="inline-block">

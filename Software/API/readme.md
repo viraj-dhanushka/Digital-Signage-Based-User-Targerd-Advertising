@@ -45,9 +45,9 @@ Asset Duration: 25
 We will use the following example command and can prepare the username and password:
 `curl -k --anyauth --user admin:password -X GET "http://192.168.1.10/api/v1.2/assets" -H  "accept: application/json"`
 
-The -k parameter allows for HTTPS/SSL connections without certs.  
-The --anyauth parameter allows for any type of authentication that the server has set on its end.  
-The --user admin:password parameter needs to be edited for the specific RPi device that will be contacted.  
+The `-k` parameter allows for HTTPS/SSL connections without certs.  
+The `--anyauth` parameter allows for any type of authentication that the server has set on its end.  
+The `--user admin:password` parameter needs to be edited for the specific RPi device that will be contacted.  
 
 ---
 #### This section of python code is what the server.py file uses to enable the default assets that are prepared in the default_assets.yml file

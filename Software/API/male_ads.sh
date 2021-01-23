@@ -4,7 +4,7 @@
 set -x
 
 # global variables
-API_URL='http://192.168.1.8/api/v1.2/assets'
+API_URL='https://192.168.43.219/api/v1/assets'
 H_ACCEPT='accept: application/json'
 H_TYPE='content-type: application/json'
 
@@ -56,11 +56,11 @@ EOF
 }
 
 # create assets
-curl -s -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad1)";
-curl -s -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad2)";
-curl -s -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad3)";
+curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad1)";
+curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad2)";
+curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad3)";
 
 # restart asset playlist
-curl -X GET "http://192.168.1.8/api/v1/assets/control/previous" -H  "accept: application/json";
+curl -k -X GET "https://192.168.43.219/api/v1/assets/control/previous" -H  "accept: application/json";
 
 #end

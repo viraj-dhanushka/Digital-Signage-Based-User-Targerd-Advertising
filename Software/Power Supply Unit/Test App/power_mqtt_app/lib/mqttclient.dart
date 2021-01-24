@@ -1,4 +1,3 @@
-//import 'package:flutter/material.dart';
 import 'package:mqtt_client/mqtt_client.dart';
 import 'package:mqtt_client/mqtt_server_client.dart';
 
@@ -15,9 +14,9 @@ class MQTTClientWrapper {
     builder.addString(message);
 
     print(
-        'MQTTClientWrapper::Publishing message $message to topic "84:CC:A8:84:B8:21"');
+        'MQTTClientWrapper::Publishing message $message to topic "esp8266/test1"');
     client.publishMessage(
-        "84:CC:A8:84:B8:21", MqttQos.atLeastOnce, builder.payload,
+        "esp8266/test1", MqttQos.atLeastOnce, builder.payload,
         retain: true);
   }
 
@@ -30,8 +29,8 @@ class MQTTClientWrapper {
       client.disconnect();
     }
 
-    print('MQTTClientWrapper::Subscribing to the "84:CC:A8:84:B8:21" topic');
-    client.subscribe('84:CC:A8:84:B8:21', MqttQos.atLeastOnce);
+    print('MQTTClientWrapper::Subscribing to the "esp8266/test1" topic');
+    client.subscribe('esp8266/test1', MqttQos.atLeastOnce);
 
     client.updates.listen((List<MqttReceivedMessage<MqttMessage>> c) {
       final MqttPublishMessage message = c[0].payload;
@@ -46,7 +45,7 @@ class MQTTClientWrapper {
 
   void _setupMqttClient() {
     client =
-        MqttServerClient.withPort('broker.emqx.io', 'flutter_client1', 1883);
+        MqttServerClient.withPort('broker.emqx.io', 'flutter_client', 1883);
     client.logging(on: true);
     client.onConnected = onConnected;
     client.onDisconnected = onDisconnected;

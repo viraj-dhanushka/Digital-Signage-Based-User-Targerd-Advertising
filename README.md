@@ -2,26 +2,7 @@
 
 [**Click here to visit our website**](https://viradhanus.github.io/Digital-Signage-Based-User-Targerd-Advertising/)
 
-#### Project Contributors : 
-  * Emyll Almonte
-  * Viraj Dhanushka  
-  * Sumudu Lakmali  
-  * Hans Thisanke   
-                           
-<div id="Members" >
-    <div class="inline-block">
-        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Emyll.jpeg" align="left" width="160" height="160">
-    </div>
-    <div class="inline-block">
-        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member1.jpg" align="left" width="160" height="160">
-    </div>
-    <div class="inline-block">
-        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member2.jpg" align="left" width="160" height="160">
-    </div>
-    <div class="inline-block">
-       <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member3.jpg" alt= " "  width="140" height="160">
-    </div>
-</div>
+
 
 ## INTRODUCTION
 
@@ -53,5 +34,24 @@ Our solution architecture mainly consists of three units. They are digital signa
 - Flutter is used as the mobile app framework where dart is used as the programming language since the same code base can be used to develop both android and ios applications.
 - As an additional improvement, a power supply unit which can control the digital screen on/off through the web application will be implemented.
 
-
+#### Project Contributors : 
+  * Emyll Almonte
+  * Viraj Dhanushka  
+  * Sumudu Lakmali  
+  * Hans Thisanke   
+                           
+<div id="Members" >
+    <div class="inline-block">
+        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Emyll.jpeg" align="left" width="160" height="160">
+    </div>
+    <div class="inline-block">
+        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member1.jpg" align="left" width="160" height="160">
+    </div>
+    <div class="inline-block">
+        <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member2.jpg" align="left" width="160" height="160">
+    </div>
+    <div class="inline-block">
+       <img src ="https://github.com/viradhanus/Digital-Signage-Based-User-Targerd-Advertising/blob/main/Images/Member3.jpg" alt= " "  width="140" height="160">
+    </div>
+</div>
 

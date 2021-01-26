@@ -12,7 +12,7 @@ ALL_REQ='is_enabled": "1",
 	"mimetype": "webpage",
 	"start_date": "2020-01-01T00:00:00.000Z",
 	"end_date": "9999-01-01T00:00:00.000Z",
-	"duration": "15",
+	"duration": "20",
 	"skip_asset_check": "1'
 
 # loop through array contents to gather all current asset_id's
@@ -57,10 +57,13 @@ EOF
 
 # create assets
 curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad1)"; # -k or --insecure 
-curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad2)";
-curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad3)";
+# curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad2)";
+# curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad3)";
+
+# curl -s -k -X PUT "https://192.168.43.219/api/v1/assets/male_ad1" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad1)"; # -k or --insecure 
 
 # restart asset playlist
 curl -k -X GET "https://192.168.43.219/api/v1/assets/control/previous" -H  "accept: application/json";
 
 #end
+echo $1

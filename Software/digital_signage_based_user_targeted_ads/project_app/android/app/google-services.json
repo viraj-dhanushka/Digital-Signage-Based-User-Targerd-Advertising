@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "139010388894",
+    "firebase_url": "https://statechangeapp-default-rtdb.firebaseio.com",
+    "project_id": "statechangeapp",
+    "storage_bucket": "statechangeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139010388894:android:f8ad1bf1815d2f9e8adc8f",
+        "android_client_info": {
+          "package_name": "com.example.project_api"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139010388894-7v9t7rqc58n7prulbdnf1ouql5v811hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcuEOSzki9Mj0BaEgNxLSm0Vz6khZzFaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139010388894-7v9t7rqc58n7prulbdnf1ouql5v811hs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139010388894:android:63109c9b45193d838adc8f",
+        "android_client_info": {
+          "package_name": "com.example.smart_power_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139010388894-7v9t7rqc58n7prulbdnf1ouql5v811hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcuEOSzki9Mj0BaEgNxLSm0Vz6khZzFaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139010388894-7v9t7rqc58n7prulbdnf1ouql5v811hs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

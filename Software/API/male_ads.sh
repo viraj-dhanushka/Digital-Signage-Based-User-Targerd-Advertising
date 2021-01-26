@@ -57,13 +57,10 @@ EOF
 
 # create assets
 curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad1)"; # -k or --insecure 
-# curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad2)";
-# curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad3)";
-
-# curl -s -k -X PUT "https://192.168.43.219/api/v1/assets/male_ad1" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad1)"; # -k or --insecure 
+curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad2)";
+curl -s -k -X POST "${API_URL}" -H "${H_ACCEPT}" -H "${H_TYPE}" -d "$(male_ad3)";
 
 # restart asset playlist
 curl -k -X GET "https://192.168.43.219/api/v1/assets/control/previous" -H  "accept: application/json";
 
 #end
-echo $1

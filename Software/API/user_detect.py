@@ -5,12 +5,14 @@
 
 # os.system('/home/viraj/Desktop/Project-Signage/Digital-Signage-Based-User-Targerd-Advertising/Software/API/male_ads.sh ' + "abc")
 
+import threading
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
 # import getmac
 import datetime
+import time
 
 # Use a service account
 cred = credentials.Certificate('/home/viraj/Desktop/Project-Signage/Digital-Signage-Based-User-Targerd-Advertising/Software/API/flashapp-7027e-firebase-adminsdk-fz2rt-714ca34e83.json')
@@ -22,6 +24,11 @@ male_ads_dict = {}
 female_ads_dict = {}
 generic_ads_dict = {}
 
+
+
+
+
+
 #function to get ads from firestore
 def getAds(male_ads_dict, female_ads_dict, generic_ads_dict):
     # macAddr = getmac.get_mac_address()
@@ -32,20 +39,45 @@ def getAds(male_ads_dict, female_ads_dict, generic_ads_dict):
 
     if rpi_mac.exists: 
 
-        male_ads_ref = rpi_ref.collection(u'advertisements').document(u'male')
-        female_ads_ref = rpi_ref.collection(u'advertisements').document(u'female')
-        generic_ads_ref = rpi_ref.collection(u'advertisements').document(u'generic')
+        ads_ref = rpi_ref.collection(u'advertisements')
 
-        male_ads = male_ads_ref.get()
-        female_ads = female_ads_ref.get()
-        generic_ads = generic_ads_ref.get()
+        # male_ads_ref = ads_ref.document(u'male')
+        # female_ads_ref = ads_ref.document(u'female')
+        # generic_ads_ref = ads_ref.document(u'generic')
+        
+        # Create an Event for notifying main thread.
+        callback_done = threading.Event()
 
-        if male_ads.exists:
-            male_ads_dict = male_ads.to_dict()
-        if female_ads.exists:
-            female_ads_dict = female_ads.to_dict()
-        if generic_ads.exists:
-            generic_ads_dict = generic_ads.to_dict()
+        # Create a callback on_snapshot function to capture changes
+        def on_snapshot(col_snapshot, changes, read_time):
+            print(u'Callback received query snapshot.')
+            print(u'Current cities in California:')
+            for doc in col_snapshot:
+                if doc.id == 'male':
+                    male_ads_dict = doc.to_dict()
+                    print(male_ads_dict)
+                if doc.id == 'female':
+                    female_ads_dict = doc.to_dict()
+                if doc.id == 'generic':
+                    generic_ads_dict = doc.to_dict()
+
+            callback_done.set()
+
+        col_query = ads_ref
+
+        # Watch the collection query
+        query_watch = col_query.on_snapshot(on_snapshot)
+
+        # male_ads = male_ads_ref.get()
+        # female_ads = female_ads_ref.get()
+        # generic_ads = generic_ads_ref.get()
+
+        # if male_ads.exists:
+        #     male_ads_dict = male_ads.to_dict()
+        # if female_ads.exists:
+        #     female_ads_dict = female_ads.to_dict()
+        # if generic_ads.exists:
+        #     generic_ads_dict = generic_ads.to_dict()
 
     else:
         rpi_ref.set({
@@ -57,3 +89,9 @@ def getAds(male_ads_dict, female_ads_dict, generic_ads_dict):
 
 # for doc in docs:
 #     print(f'{doc.id} => {doc.to_dict()}')
+
+getAds(male_ads_dict, female_ads_dict, generic_ads_dict)
+# Keep the app running
+while True:
+    time.sleep(1)
+    print('processing...')

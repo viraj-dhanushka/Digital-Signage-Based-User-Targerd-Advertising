@@ -49,7 +49,7 @@ cat <<EOF
 	{
 	"asset_id": "male_ad3",
 	"name": "male_ad3",
-	"uri": "https://www.telegraph.co.uk/content/dam/men/2018/07/02/TELEMMGLPICT000168190077_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQfyf2A9a6I9YchsjMeADBa08.jpeg",
+	"uri": " EOF $1 cat <<EOF ",
 	"${ALL_REQ}"
 }
 EOF

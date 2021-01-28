@@ -12,7 +12,7 @@ ALL_REQ='is_enabled": "1",
 	"mimetype": "webpage",
 	"start_date": "2020-01-01T00:00:00.000Z",
 	"end_date": "9999-01-01T00:00:00.000Z",
-	"duration": "15",
+	"duration": "20",
 	"skip_asset_check": "1'
 
 # loop through array contents to gather all current asset_id's

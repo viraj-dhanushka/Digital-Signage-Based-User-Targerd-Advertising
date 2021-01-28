@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'constants.dart';
-import 'package:project_api/mqttclient.dart';
-//import 'package:firebase_core/firebase_core.dart';
+import '../constants.dart';
+import 'package:project_api/mqttClient/mqttclient.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:firebase_core/firebase_core.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 
-final firestore = FirebaseFirestore.instance;
+final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
 class Smartpower extends StatelessWidget {
   @override
@@ -41,35 +41,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void setup() {
     mqttClientWrapper.prepareMqttClient(userMAC);
-    //mqttClientWrapper.subscribeTopic(userMAC);
   }
-  /*
-  @override
-  void initState() {
-    super.initState();
 
-    setup();
-  }
-  */
-
-  static Future<bool> validateMAC(String inputMac) async {
-    final addresses = await firestore.collection('MacAddresses').get();
-    for (var mac in addresses.docs) {
-      if (mac.data().values.elementAt(0) == inputMac) {
-        return Future.value(true);
+  Future<bool> validateMAC(String inputMac) async {
+    try {
+      final addresses = await _firestore.collection('MacAddresses').get();
+      for (var mac in addresses.docs) {
+        for (var val in mac.data().values) {
+          if (val == inputMac) {
+            return Future.value(true);
+          }
+        }
       }
+      return Future.value(false);
+    } on FirebaseException catch (e) {
+      print(e);
+      return Future.value(false);
     }
-    return Future.value(false);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*
-      appBar: AppBar(
-        title: Text("Smart Power Supply"),
-      ),
-      */
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -104,7 +97,6 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Submit'),
             ),
           ),
-          //SizedBox(height: 10.0),
           Expanded(
             flex: 4,
             child: ReusableCard(
@@ -143,7 +135,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          //SizedBox(height: 10.0),
           Expanded(
             child: FloatingActionButton.extended(
               onPressed: () {
@@ -169,22 +160,6 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundColor: Colors.blueGrey,
             ),
           ),
-          /*
-          Expanded(
-            child: BottomButton(
-              buttonTitle: 'CONFIRM',
-              onTap: () {
-                if (selectState == PowerState.turnOn) {
-                  print("Screen ON");
-                  mqttClientWrapper.publishMessage("1");
-                } else {
-                  print("Screen OFF");
-                  mqttClientWrapper.publishMessage("0");
-                }
-              },
-            ),
-          ),
-          */
         ],
       ),
     );
@@ -240,33 +215,3 @@ class IconContent extends StatelessWidget {
     );
   }
 }
-
-/*
-class BottomButton extends StatelessWidget {
-  BottomButton({@required this.onTap, @required this.buttonTitle});
-
-  final Function onTap;
-  final String buttonTitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        child: Center(
-            child: Text(
-          buttonTitle,
-          style: kLargeButtonTextStyle,
-        )),
-        //color: Color(0xFFEB15555),
-        color: Colors.blueGrey,
-        margin: EdgeInsets.only(top: 0.0),
-        padding: EdgeInsets.only(bottom: 10.0),
-        //padding: EdgeInsets.all(10.0),
-        width: double.infinity,
-        height: kBottomContainerHeight,
-      ),
-    );
-  }
-}
-*/

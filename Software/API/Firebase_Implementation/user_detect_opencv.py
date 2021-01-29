@@ -103,10 +103,10 @@ def customerAnalysis(adType,adAge):
     print(adAge)
     if adType == 'male':
         if adAge == '(25,32)':
-            customer_ref.update({u'male(25,32)': firestore.Increment(1)})
+            customer_ref.update({u'male_25to32': firestore.Increment(1)})
     elif adType == 'female':
         if adAge == '(25,32)':
-            customer_ref.update({u'female(25,32)': firestore.Increment(1)})
+            customer_ref.update({u'female_25to32': firestore.Increment(1)})
 
 
 # Keep the app running

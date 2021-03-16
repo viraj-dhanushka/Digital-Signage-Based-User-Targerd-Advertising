@@ -13,7 +13,7 @@ class MQTTClientWrapper {
   }
 
   void subscribeTopic(String topic) {
-    currentTopic = "esp8266/" + topic;
+    currentTopic = topic;
     print('MQTTClientWrapper::Subscribing to the "$currentTopic" topic');
     client.subscribe(currentTopic, MqttQos.atLeastOnce);
 

@@ -39,9 +39,10 @@ generic_ads_dict = {}
 macAddr = u'b8:27:eb:88:85:92'
 
 rpi_ref = db.collection(u'signage units').document(macAddr)
+issued_rpi_ref = db.collection(u'issued signage units').document(macAddr)
 customer_ref = rpi_ref.collection(u'customers').document(u'analysis')
 
-rpi_mac = rpi_ref.get()
+rpi_mac = issued_rpi_ref.get()
 if rpi_mac.exists: 
     print("device exists")
 else:
@@ -112,7 +113,7 @@ def customerAnalysis(adType,adAge):
 # Keep the app running
 while True:
 
-    image = cv2.imread(r"/home/viraj/Desktop/abc/images15.jpg") 
+    image = cv2.imread(r"/home/viraj/Desktop/abc/group.jpg") 
 
     imgGray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(imgGray, 1.2 , 2)
